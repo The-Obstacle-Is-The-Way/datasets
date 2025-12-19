@@ -140,6 +140,7 @@ TORCHCODEC_AVAILABLE = importlib.util.find_spec("torchcodec") is not None
 TORCHVISION_AVAILABLE = importlib.util.find_spec("torchvision") is not None
 PDFPLUMBER_AVAILABLE = importlib.util.find_spec("pdfplumber") is not None
 NIBABEL_AVAILABLE = importlib.util.find_spec("nibabel") is not None
+PYBIDS_AVAILABLE = importlib.util.find_spec("bids") is not None
 
 # Optional compression tools
 RARFILE_AVAILABLE = importlib.util.find_spec("rarfile") is not None
@@ -166,6 +167,9 @@ DOWNLOADED_DATASETS_PATH = Path(os.getenv("HF_DATASETS_DOWNLOADED_DATASETS_PATH"
 EXTRACTED_DATASETS_DIR = "extracted"
 DEFAULT_EXTRACTED_DATASETS_PATH = os.path.join(DEFAULT_DOWNLOADED_DATASETS_PATH, EXTRACTED_DATASETS_DIR)
 EXTRACTED_DATASETS_PATH = Path(os.getenv("HF_DATASETS_EXTRACTED_DATASETS_PATH", DEFAULT_EXTRACTED_DATASETS_PATH))
+
+# Cached dataset info options
+SAVE_ORIGINAL_SHARD_LENGTHS = False
 
 # Download count for the website
 HF_UPDATE_DOWNLOAD_COUNTS = (
